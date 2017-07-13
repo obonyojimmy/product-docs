@@ -1,7 +1,7 @@
-.. _ensembl_config:
 
-ensembl_config
-@@@@@@@@@@@@@@
+
+## ensembl_config
+
 
 **Prerequisite**  
 1) Git   
@@ -62,7 +62,7 @@ Kernel Version: 3.14.27-25.47.amzn1.x86_64
 Operating System: Amazon Linux AMI 2014.09
 ~~~
 
-###docker-ensembl
+### docker-ensembl
 
 
 Dockerfile to create a container image with the EnsEMBL Perl APIs and tools installed

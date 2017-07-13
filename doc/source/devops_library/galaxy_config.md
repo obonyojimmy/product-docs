@@ -1,7 +1,7 @@
-.. _galaxy_config:
 
-galaxy_config
-@@@@@@@@@@@@@
+
+## galaxy_config
+
 
 **Prerequisite**   
 1)python  
