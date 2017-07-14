@@ -5,3 +5,13 @@ FHIR System API's will be used to fetch Patient related information from FHIR Da
 
 As part of first release we have developed following API's and are enabled to perform GET based on provided ID
 
+Patient
+.. image:: /images/Patient-Condition-test.GIF
+:target: ../images/Patient-Condition-test.GIF
+
+Condition
+
+
+Appointment
+
+
