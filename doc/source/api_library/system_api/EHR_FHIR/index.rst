@@ -23,6 +23,8 @@ eg:{ConditionID}=Condition-10018
 
 Refer above figure to invoke API and get standard json structure for response.
 
+.. image:: /_static/Patient-Condition-test.GIF
+
 Appointment API:
 
 EC2 Instance URL: http://ec2-34-208-134-225.us-west-2.compute.amazonaws.com:8081/api/Appointment/{AppointmentID}   
@@ -30,6 +32,8 @@ EC2 Instance URL: http://ec2-34-208-134-225.us-west-2.compute.amazonaws.com:8081
 eg:{AppointmentID} = 2019724
 
 Please refer below figure to get json response
+
+.. image:: /_static/Appointment-test.GIF
 
 
 
