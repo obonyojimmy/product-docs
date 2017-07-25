@@ -27,6 +27,7 @@ Genomics
 
 .. toctree::
    genomics/genomics_intro
+   genomics/genomics_workflows
 
 
 Proteomics
