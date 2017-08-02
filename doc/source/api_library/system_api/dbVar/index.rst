@@ -11,17 +11,11 @@ dbVar’s primary tasks are to support the submission and organization of struct
 
 Some videos providing more information about dbVar are available here:
 
-.. raw:: html
+https://youtu.be/qkZiHPdyKng
 
-    <iframe width="560" height="315" src="https://youtu.be/qkZiHPdyKng" frameborder="0" allowfullscreen></iframe>
+https://youtu.be/8RCUU-flb9s
 
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://youtu.be/8RCUU-flb9s" frameborder="0" allowfullscreen></iframe>
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://youtu.be/O92k2O28zT8" frameborder="0" allowfullscreen></iframe>
+https://youtu.be/O92k2O28zT8
 
 
 **Data Inputs**

@@ -32,6 +32,7 @@ System APIs
    system_api/DrugBase/index
    system_api/dbGaP/index
    system_api/ClinVar/index
+   system_api/PheGenI/index
 
 **Templates**
 
