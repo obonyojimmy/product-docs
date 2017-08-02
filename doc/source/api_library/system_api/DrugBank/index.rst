@@ -1,4 +1,4 @@
-DrugBase System API
+DrugBank System API
 !!!!!!!!!!!!!!!!!!!
 
 Not sure if we need DrugBase - will document if we decide to move forward.

@@ -10,6 +10,8 @@ API List
 System APIs
 @@@@@@@@@@@
 
+System APIs will be responsible for containing the connectors to each knowledge base or other endpoint and transoforming select data elements into a similar schema/format as GA4GH, though we will use our own data standards where it makes sense. We will not use the GA4GH API directly. 
+
 **Production**
 
 **Development**
@@ -21,6 +23,7 @@ System APIs
 **Planned**
 
 .. toctree::
+   system_api/Galaxy/index
    system_api/ANNOVAR/index
    system_api/Ensembl/index
    system_api/dbSNP/index
@@ -29,7 +32,7 @@ System APIs
    system_api/GO/index
    system_api/MeSH/index
    system_api/RxNorm/index   
-   system_api/DrugBase/index
+   system_api/DrugBank/index
    system_api/dbGaP/index
    system_api/ClinVar/index
    system_api/PheGenI/index
