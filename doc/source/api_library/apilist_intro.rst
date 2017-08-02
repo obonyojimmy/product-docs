@@ -34,6 +34,7 @@ System APIs
    system_api/ClinVar/index
 
 **Templates**
+
 .. toctree::
    system_api/EHR_FHIR/index
    system_api/Fitness_FHIR/index
