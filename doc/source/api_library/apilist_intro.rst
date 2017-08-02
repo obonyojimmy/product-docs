@@ -16,6 +16,7 @@ System APIs
 
 .. toctree::
    system_api/EHR_FHIR/index
+   system_api/Galaxy/index
 
 **Planned**
 

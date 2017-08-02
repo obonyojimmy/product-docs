@@ -1,76 +1,102 @@
-ANNOVAR System API
+GO System API
 !!!!!!!!!!!!!!!!!!!
 
-ANNOVAR is an efficient software tool to utilize update-to-date information to functionally annotate genetic variants detected from diverse genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly, yeast and many others). Given a list of variants with chromosome, start position, end position, reference nucleotide and observed nucleotides, ANNOVAR can perform:
+http://www.geneontology.org/
 
-* **Gene-based annotation:** identify whether SNPs or CNVs cause protein coding changes and the amino acids that are affected. Users can flexibly use RefSeq genes, UCSC genes, ENSEMBL genes, GENCODE genes, AceView genes, or many other gene definition systems.
+Gene Ontology: the framework for the model of biology. The GO defines concepts/classes used to describe gene function, and relationships between these concepts. It classifies functions along three aspects:
 
-* **Region-based annotation:** identify variants in specific genomic regions, for example, conserved regions among 44 species, predicted transcription factor binding sites, segmental duplication regions, GWAS hits, database of genomic variants, DNAse I hypersensitivity sites, ENCODE H3K4Me1/H3K4Me3/H3K27Ac/CTCF sites, ChIP-Seq peaks, RNA-Seq peaks, or many other annotations on genomic intervals.
+* molecular function: molecular activities of gene products
+* cellular component: where gene products are active
+* biological process: pathways and larger processes made up of the activities of multiple gene products.
 
-* **Filter-based annotation:** identify variants that are documented in specific databases, for example, whether a variant is reported in dbSNP, what is the allele frequency in the 1000 Genome Project, NHLBI-ESP 6500 exomes or Exome Aggregation Consortium, calculate the SIFT/PolyPhen/LRT/MutationTaster/MutationAssessor/FATHMM/MetaSVM/MetaLR scores, find intergenic variants with GERP++ score < 2, or many other annotations on specific mutations.
-Other functionalities: Retrieve the nucleotide sequence in any user-specific genomic positions in batch, identify a candidate gene list for Mendelian diseases from exome data, and other utilities.
+The Gene Ontology project provides controlled vocabularies of defined terms representing gene product properties. These cover three domains: Cellular Component, the parts of a cell or its extracellular environment; Molecular Function, the elemental activities of a gene product at the molecular level, such as binding or catalysis; and Biological Process, operations or sets of molecular events with a defined beginning and end, pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms.
 
-The figure below shows a summary of ANNOVAR annotations:
+The GO ontology is structured as a directed acyclic graph where each term has defined relationships to one or more other terms in the same domain, and sometimes to other domains. The GO vocabulary is designed to be species-agnostic, and includes terms applicable to prokaryotes and eukaryotes, and single and multicellular organisms.
 
-.. image:: /_static/ANNOVAR-summary.png
+In an example of GO annotation, the gene product "cytochrome c" can be described by the Molecular Function term "oxidoreductase activity", the Biological Process terms "oxidative phosphorylation" and "induction of cell death", and the Cellular Component terms "mitochondrial matrix" and "mitochondrial inner membrane".
 
-The API should access ANNOVAR data directly, but the web version of ANNOVAR converts a .vcf input to a .vcf tabulated output file. Here's a good article on common issues with .vcf files:
+The figure below shows a summary of GO sources:
 
-http://annovar.openbioinformatics.org/en/latest/articles/VCF/
+.. image:: /_static/GO-summary.png
+
+**SCHEMA - DATA INPUTS AND OUTPUTS TO BE DEFINED**
+
+Go_associations
+
+* Association
+* Association_property
+* Association_qualifier
+* Association_species_qualifier
+* Evidence
+* Evidence_dbxref
+* Gene_product
+* Gene_product_subset
+* Gene_product_synonym
+* Species
+
+Go_audit
+
+* Instance_data
+* Source_audit
+* Term_audit
+
+Go_general
+
+* Db
+* Dbxref
+
+Go_graph
+
+* Relation_composition
+* Relation_properties
+* Term
+* Term2term
+
+Go_homology
+
+* Gene_product_ancestor
+* Gene_product_homology
+* Gene_product_homolset
+* Gene_product_phylotree
+* Homolset
+* Phylotree
+
+Go_meta
+
+* Term2term_metadata
+* Term_dbxref
+* Term_definition
+* Term_subset
+* Term_synonym
+
+Go_optimisations
+
+* Gene_product_count
+* Graph_path
+
+Go_sequence
+
+* Gene_product_seq
+* Seq
+* Seq_dbxref
+* Seq_property
+* Public
+
 
 **Data Inputs**
 @@@@@@@@@@@@@@@
 
 **Required**
 
-* Chr
-* Start
-* End
-* Ref
-* Alt
+* TBD
 
 **Data Outputs**
 @@@@@@@@@@@@@@@@
 
 **Required**
 
-* Func.refGene
-* Gene.refGene	
-* GeneDetail.refGene	
-* ExonicFunc.refGene	
-* AAChange.refGene	
-* Xref.refGene	
-* cytoBand	
+* TBD
 
 **Available but not used**
 
-* SIFT_score	
-* SIFT_pred
-* Polyphen2_HDIV_score	
-* Polyphen2_HDIV_pred	
-* Polyphen2_HVAR_score	
-* Polyphen2_HVAR_pred	
-* LRT_score	
-* LRT_pred	
-* MutationTaster_score
-* MutationTaster_pred	
-* MutationAssessor_score	
-* MutationAssessor_pred	
-* FATHMM_score	
-* FATHMM_pred	
-* PROVEAN_score	
-* PROVEAN_pred	
-* VEST3_score	CADD_raw	
-* CADD_phred	DANN_score	
-* fathmm-MKL_coding_score	
-* fathmm-MKL_coding_pred	
-* MetaSVM_score	
-* MetaSVM_pred	
-* MetaLR_score	MetaLR_pred	
-* integrated_fitCons_score	
-* integrated_confidence_value	GERP++_RS	
-* phyloP7way_vertebrate	
-* phyloP20way_mammalian	
-* phastCons7way_vertebrate	
-* phastCons20way_mammalian	
-* SiPhy_29way_logOdds
+* TBD

@@ -1,76 +1,110 @@
-ANNOVAR System API
+dbGaP System API
 !!!!!!!!!!!!!!!!!!!
 
-ANNOVAR is an efficient software tool to utilize update-to-date information to functionally annotate genetic variants detected from diverse genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly, yeast and many others). Given a list of variants with chromosome, start position, end position, reference nucleotide and observed nucleotides, ANNOVAR can perform:
-
-* **Gene-based annotation:** identify whether SNPs or CNVs cause protein coding changes and the amino acids that are affected. Users can flexibly use RefSeq genes, UCSC genes, ENSEMBL genes, GENCODE genes, AceView genes, or many other gene definition systems.
-
-* **Region-based annotation:** identify variants in specific genomic regions, for example, conserved regions among 44 species, predicted transcription factor binding sites, segmental duplication regions, GWAS hits, database of genomic variants, DNAse I hypersensitivity sites, ENCODE H3K4Me1/H3K4Me3/H3K27Ac/CTCF sites, ChIP-Seq peaks, RNA-Seq peaks, or many other annotations on genomic intervals.
-
-* **Filter-based annotation:** identify variants that are documented in specific databases, for example, whether a variant is reported in dbSNP, what is the allele frequency in the 1000 Genome Project, NHLBI-ESP 6500 exomes or Exome Aggregation Consortium, calculate the SIFT/PolyPhen/LRT/MutationTaster/MutationAssessor/FATHMM/MetaSVM/MetaLR scores, find intergenic variants with GERP++ score < 2, or many other annotations on specific mutations.
-Other functionalities: Retrieve the nucleotide sequence in any user-specific genomic positions in batch, identify a candidate gene list for Mendelian diseases from exome data, and other utilities.
+Developed and operated by the National Library of Medicine’s National Center for Biotechnology Information (NCBI), dbGaP archives and distributes data from studies that have investigated the relationship between phenotype and genotype, such as genome-wide association studies (GWAS). The database provides two levels of access: open (available to anyone with no restrictions), and controlled (requiring preauthorization). The controlled-access portion of the database provides for downloads of individual-level genotype and phenotype data that have been de-identified (i.e., no personal identifiers, such as name, etc.). 
 
 The figure below shows a summary of ANNOVAR annotations:
 
-.. image:: /_static/ANNOVAR-summary.png
+.. image:: /_static/dbgap-summary.jpg
 
-The API should access ANNOVAR data directly, but the web version of ANNOVAR converts a .vcf input to a .vcf tabulated output file. Here's a good article on common issues with .vcf files:
-
-http://annovar.openbioinformatics.org/en/latest/articles/VCF/
 
 **Data Inputs**
 @@@@@@@@@@@@@@@
 
+**INPUTS TBD**
+
+* Analysis
+* Analysis ID
+* Analysis Name
+* Ancestor
+* Attribution
+* Belongs To
+* Common Data Element Resource
+* Common Data Element Term
+* Data Access Committee
+* Dataset
+* Dataset ID
+* Dataset Name
+* Discriminator
+* Disease
+* Document
+* Document ID
+* Document Name
+* Document Part
+* Filter
+* Genotype Platform
+* Has Analysis
+* Has Dataset
+* Has Document
+* Has PhenX Mapping
+* Has Variable
+* Is Root Study
+* Is Top-level Study
+* Molecular Data Type
+* Object Type
+* PhenX
+* Primary Phenotype in Study
+* Project
+* Study
+* Study Archive
+* Study design
+* Study has SRA components
+* Study ID
+* Study Name
+* Variable
+* Variable Description
+* Variable ID
+* Variable Name
+
+
 **Required**
 
-* Chr
-* Start
-* End
-* Ref
-* Alt
+* TBD
 
 **Data Outputs**
 @@@@@@@@@@@@@@@@
 
+**TBD OUTPUTS**
+
+STUDIES
+
+* Study - Example: phs001243.v1.p1 Genetic Basis of Breast Cancer Resistance in BRCA1 Mutation Carrier
+* Embargo Release - Example: Version 1: passed embargo
+* Details - Example: 14 variables, 2 documents, 2 analyses, study has SRA components
+* Participants - Example: 1991
+* Type of Study - Example: Case-Control
+* Links - Example: BioProject Links, BioSample, Gene MeSH, SRA
+* Platform - Example: SureSelectXT Human All Exon 50Mb
+
+VARIABLES
+
+* Clinical Variable - Example: CONSENT Genetic Basis of Breast Cancer Resistance in BRCA1 Mutation Carrier
+* Dataset - Example: BRCA1_Carrier_Subject Subject ID, affection status, and consent group of participants with breast cancer and involved in the \"Genetic Basis of Breast Cancer Resistance in BRCA1 Mutation Carrier\" project.
+* Variable description - Example: Consent group as determined by DAC
+* Variable ID - Example: phv00273332.v1.p1
+
+DOCUMENTS
+
+* Study Document - Example: The Pharmacogenomics of Breast Cancer Prevention
+* PGRN-RIKEN NSABP Prevention Study
+* Description - Example: The Pharmacogenomics of Breast Cancer Prevention
+
+ANALYSES
+
+* Analysis - Example: A Genome-Wide Association Study On Pharmacogenetic Optimization Of Anticoagulant Response (POAT) Genetic And Environmental Determinants Of Warfarin Response (GEDWR) Warfarin Pharmacogenetics: Pharmacogenetic Optimization of Anticoagulant Response (POAT) and Genetic and Environmental Determinants of Warfarin Response (GEDWR) Browse genome for pha003884.1
+* Description - Example: The Genetic and Environmental Determinants of Warfarin Response (GEDWR) and the Pharmacogenetic Optimization of Anticoagulation Therapy (POAT) are prospective cohort study aimed at defining the influence of CYP2C9, VKORC1 and other genes. The outcome variable we analyzed is stable warfarin dose (mg/week) that was defined as the dose (with up to a 10% change) that resulted in a therapeutic INR between 1.8 and 3.2 for at least 3 consecutive clinic visits at least two weeks apart. the number of subjects were 200.
+
+
+DATASETS
+
+* Dataset - Example: BRCA1_Carrier_Sample_Attributes Genetic Basis of Breast Cancer Resistance in BRCA1 Mutation Carrier
+* Description - Example: Sample ID, anlalyte type, body site where sample was obtained, disease status, and tumor status of sample obtained from participants with breast cancer and involved in the \"Genetic Basis of Breast Cancer Resistance in BRCA1Mutation Carrier\" project.
+
+
 **Required**
 
-* Func.refGene
-* Gene.refGene	
-* GeneDetail.refGene	
-* ExonicFunc.refGene	
-* AAChange.refGene	
-* Xref.refGene	
-* cytoBand	
+* TBD
 
 **Available but not used**
 
-* SIFT_score	
-* SIFT_pred
-* Polyphen2_HDIV_score	
-* Polyphen2_HDIV_pred	
-* Polyphen2_HVAR_score	
-* Polyphen2_HVAR_pred	
-* LRT_score	
-* LRT_pred	
-* MutationTaster_score
-* MutationTaster_pred	
-* MutationAssessor_score	
-* MutationAssessor_pred	
-* FATHMM_score	
-* FATHMM_pred	
-* PROVEAN_score	
-* PROVEAN_pred	
-* VEST3_score	CADD_raw	
-* CADD_phred	DANN_score	
-* fathmm-MKL_coding_score	
-* fathmm-MKL_coding_pred	
-* MetaSVM_score	
-* MetaSVM_pred	
-* MetaLR_score	MetaLR_pred	
-* integrated_fitCons_score	
-* integrated_confidence_value	GERP++_RS	
-* phyloP7way_vertebrate	
-* phyloP20way_mammalian	
-* phastCons7way_vertebrate	
-* phastCons20way_mammalian	
-* SiPhy_29way_logOdds
+* TBD
