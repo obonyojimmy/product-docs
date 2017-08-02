@@ -11,11 +11,12 @@ System APIs
 @@@@@@@@@@@
 
 .. toctree::
-   system_api/GA4GH_api/index
+   system_api/ANNOVAR/index
    system_api/EHR_FHIR/index
    system_api/Fitness_FHIR/index
    system_api/Cerner_FHIR/index
    system_api/Epic_FHIR/index
+   system_api/GA4GH_api/index
 
 
 Process APIs
