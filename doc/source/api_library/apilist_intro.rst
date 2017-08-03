@@ -12,6 +12,13 @@ System APIs
 
 System APIs will be responsible for containing the connectors to each knowledge base or other endpoint and transoforming select data elements into a similar schema/format as GA4GH, though we will use our own data standards where it makes sense. We will not use the GA4GH API directly. 
 
+The general format for building system APIs is as follows:
+
+#. The API ingests data from inputs into the flow - file(s) or another API
+#. After annotating the data or processing it, the flow returns the output
+#. The API transforms (maps) the output data to the GA4GH or similar standardized schema
+#. The API exposes the output objects or entities we need
+
 A graphical version of the system API inputs and outputs can be seen below. 
 
 SYSTEM API DATA FLOW INTERACTIVE DIAGRAM:
