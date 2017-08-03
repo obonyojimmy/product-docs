@@ -59,7 +59,6 @@ For now, the output format (JSON/XML) is unimportant. The important thing is tha
 * Feature - Ensembl stable ID of feature
 * Consequence - consequence type of this variant
 * Amino acid change - only given if the variant affects the protein-coding sequence
-* Amino acid change - only given if the variant affects the protein-coding sequence
 * IMPACT - the impact modifier for the consequence type
 * VARIANT_CLASS - Sequence Ontology variant class
 * ExAC_Adj_AF - Adjusted frequency of existing variant in ExAC combined population
