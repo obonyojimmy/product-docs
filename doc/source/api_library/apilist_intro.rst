@@ -12,11 +12,11 @@ System APIs
 
 System APIs will be responsible for containing the connectors to each knowledge base or other endpoint and transoforming select data elements into a similar schema/format as GA4GH, though we will use our own data standards where it makes sense. We will not use the GA4GH API directly. 
 
-A graphical version of the system API inputs and outputs can be seen below:
+A graphical version of the system API inputs and outputs can be seen at the bottom of this page.
 
 
-.. image:: /_static/System-api-overview.svg
-
+<!-- .. image:: /_static/System-api-overview.svg -->
+ 
 **Production**
 
 **Development**
@@ -79,3 +79,10 @@ Experience APIs
 
 .. toctree::
    experience_api/Web_Portal/index
+
+
+SYSTEM API INTERACTIVE DIAGRAM:
+
+.. raw:: html
+
+    <object data="/_static/System-api-overview.svg" type="image/svg+xml"></object>
