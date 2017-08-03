@@ -15,8 +15,6 @@ System APIs will be responsible for containing the connectors to each knowledge 
 A graphical version of the system API inputs and outputs can be seen at the bottom of this page.
 
 
-<!-- .. image:: /_static/System-api-overview.svg -->
- 
 **Production**
 
 **Development**
@@ -83,6 +81,5 @@ Experience APIs
 
 SYSTEM API INTERACTIVE DIAGRAM:
 
-.. raw:: html
-
-    <object data="/_static/System-api-overview.svg" type="image/svg+xml"></object>
+.. image:: /_static/System-api-overview.svg
+            :target: ../_static/System-api-overview.svg
