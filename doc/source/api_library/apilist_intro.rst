@@ -12,6 +12,11 @@ System APIs
 
 System APIs will be responsible for containing the connectors to each knowledge base or other endpoint and transoforming select data elements into a similar schema/format as GA4GH, though we will use our own data standards where it makes sense. We will not use the GA4GH API directly. 
 
+A graphical version of the system API inputs and outputs can be seen below:
+
+
+.. image:: /_static/System-api-overview.svg
+
 **Production**
 
 **Development**
@@ -19,13 +24,12 @@ System APIs will be responsible for containing the connectors to each knowledge 
 .. toctree::
    system_api/EHR_FHIR/index
    system_api/Galaxy/index
+   system_api/Ensembl/index
 
 **Planned**
 
 .. toctree::
-   system_api/Galaxy/index
    system_api/ANNOVAR/index
-   system_api/Ensembl/index
    system_api/dbSNP/index
    system_api/dbVar/index   
    system_api/DGVa/index
