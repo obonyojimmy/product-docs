@@ -9,14 +9,14 @@ The figure below shows a summary of Ensembl functions:
 
 **API Instructions Summary (tl;dr)**
 
-This will be a process API for a biology database called Ensembl that we have hosted on AWS. The purpose will be to import a .vcf file stored in an S3 bucket and run the “Variant Effect Predictor” workflow on it, then store the output as a file back in the same S3 bucket. A high-level diagram is shown below:
+This will be a process API for a biology database called Ensembl that we have hosted on AWS. The purpose will be to import a .vcf file stored in an S3 bucket and run the "Assembly Converter" and “Variant Effect Predictor” workflows on it, then store the output as a file back in the same S3 bucket. A high-level diagram is shown below:
 
 .. image:: /_static/Ensembl-api-overview.png
 
 Process steps:
 
 * The API will first need to pull a .vcf file from an AWS S3 endpoint and transfer it to the AWS EC2 Ensembl endpoint. At this point no queuing is needed but we will add queuing in the future
-* The API then needs to call the Ensembl Variant Effect Predictor Workflow. This will annotate the file and produce a new file as an output
+* The API then needs to call the Assembly Converter followed by the Ensembl Variant Effect Predictor Workflows. This will annotate the file and produce a new file as an output
 * The API should handle errors that occur during this process and retry as needed to a reasonable point. 
 * We will also need to watch for the successful completion of the process and make sure a new annotated output file has been created
 * The output file will be transferred back to the S3 endpoint and stored. Note that the file transfer and storage should not be a blocker. As this API will interact with many other APIs, the file handling piece is not nearly as important as the data processing piece. As long as the data are ingested, processed, and transformed, the transfer and storage are of lower priority.
