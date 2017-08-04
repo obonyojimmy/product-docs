@@ -86,9 +86,7 @@ For now, the output format (JSON/XML) is unimportant. The important thing is tha
 * SYMBOL_SOURCE - the source of the gene symbol
 * STRAND - the DNA strand (1 or -1) on which the transcript/feature lies
 * ENSP - the Ensembl protein identifier of the affected transcript
-* FLAGS - transcript quality flags:
-cds_start_NF: CDS 5' incomplete
-cds_end_NF: CDS 3' incomplete
+* FLAGS - transcript quality flags: cds_start_NF: CDS 5' incomplete cds_end_NF: CDS 3' incomplete
 * SWISSPROT - Best match UniProtKB/Swiss-Prot accession of protein product
 * TREMBL - Best match UniProtKB/TrEMBL accession of protein product
 * UNIPARC - Best match UniParc accession of protein product
