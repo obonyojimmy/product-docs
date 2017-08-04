@@ -32,7 +32,7 @@ SYSTEM API DATA FLOW INTERACTIVE DIAGRAM:
 
 .. toctree::
    system_api/EHR_FHIR/index
-   system_api/Ensembl/index
+   system_api/ENSEMBL/index
    system_api/Galaxy/index
 
 **Planned**
