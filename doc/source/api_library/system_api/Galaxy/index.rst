@@ -1,76 +1,56 @@
 Galaxy System API
 !!!!!!!!!!!!!!!!!!!
 
-ANNOVAR is an efficient software tool to utilize update-to-date information to functionally annotate genetic variants detected from diverse genomes (including human genome hg18, hg19, hg38, as well as mouse, worm, fly, yeast and many others). Given a list of variants with chromosome, start position, end position, reference nucleotide and observed nucleotides, ANNOVAR can perform:
+Galaxy is an open source, web-based platform for data intensive biomedical research.
 
-* **Gene-based annotation:** identify whether SNPs or CNVs cause protein coding changes and the amino acids that are affected. Users can flexibly use RefSeq genes, UCSC genes, ENSEMBL genes, GENCODE genes, AceView genes, or many other gene definition systems.
+Galaxy tutorials can be found here: https://galaxyproject.org/learn/
 
-* **Region-based annotation:** identify variants in specific genomic regions, for example, conserved regions among 44 species, predicted transcription factor binding sites, segmental duplication regions, GWAS hits, database of genomic variants, DNAse I hypersensitivity sites, ENCODE H3K4Me1/H3K4Me3/H3K27Ac/CTCF sites, ChIP-Seq peaks, RNA-Seq peaks, or many other annotations on genomic intervals.
+A slide deck that gives a brief overview and walkthrough of galaxy is here: http://slideplayer.com/slide/7660335/
 
-* **Filter-based annotation:** identify variants that are documented in specific databases, for example, whether a variant is reported in dbSNP, what is the allele frequency in the 1000 Genome Project, NHLBI-ESP 6500 exomes or Exome Aggregation Consortium, calculate the SIFT/PolyPhen/LRT/MutationTaster/MutationAssessor/FATHMM/MetaSVM/MetaLR scores, find intergenic variants with GERP++ score < 2, or many other annotations on specific mutations.
-Other functionalities: Retrieve the nucleotide sequence in any user-specific genomic positions in batch, identify a candidate gene list for Mendelian diseases from exome data, and other utilities.
+The figure below shows a summary of Galaxy functions:
 
-The figure below shows a summary of ANNOVAR annotations:
+.. image:: /_static/Galaxy-summary.png
 
-.. image:: /_static/ANNOVAR-summary.png
+**API Instructions Summary (tl;dr)**
 
-The API should access ANNOVAR data directly, but the web version of ANNOVAR converts a .vcf input to a .vcf tabulated output file. Here's a good article on common issues with .vcf files:
+These APIs will be written for a biology database called Galaxy that we have hosted on AWS. The purpose will be to import a .vcf, .bam, or .fastq files stored in S3 buckets and run the different workflows, then store the output as a file back in the same S3 bucket.
 
-http://annovar.openbioinformatics.org/en/latest/articles/VCF/
+.. image:: /_static/Galaxy-process.png
+
+Process steps:
+
+* The API will first need to pull a .vcf file from an AWS S3 endpoint and transfer it to the AWS EC2 Galaxy endpoint. At this point no queuing is needed but we will add queuing in the future
+* The API then needs to call the proper Galaxy workflows. This will annotate the file and produce a new file as an output
+* The API should handle errors that occur during this process and retry as needed to a reasonable point. 
+* We will also need to watch for the successful completion of the process and make sure a new annotated output file has been created
+* The output file will be transferred back to the S3 endpoint and stored. Note that the file transfer and storage should not be a blocker. As this API will interact with many other APIs, the file handling piece is not nearly as important as the data processing piece. As long as the data are ingested, processed, and transformed, the transfer and storage are of lower priority.
+
+Connection instructions:
+Stored here as soon as we make the docs private.
+
+Methods and Requirements
+
+* This must be written as a REST API
+* This must follow the format and standards defined in the existing API templates located here: https://bitbucket.org/snippetmd/snippet-api-platform
+* All code must be documented. We use readthedocs for our documentation, so your documentation may be in sphinx/markdown language or plain text. See more about the documentation here: http://docs.readthedocs.io/en/latest/getting_started.html
+
 
 **Data Inputs**
 @@@@@@@@@@@@@@@
 
+The input data should be assumed to be in a GA4GH-compatible format unless files are uploaded directly. If any new fields are added for inputs and outputs, their format should be matched as closely as possible to the GA4GH schema and they should be noted here. 
+
+The default input format for Galaxy data is a raw file. The header information in the file will determine which workflow set it uses in Galaxy.
+
 **Required**
 
-* Chr
-* Start
-* End
-* Ref
-* Alt
+* .vcf, .bam, .fa, .qv, .fastq
 
 **Data Outputs**
 @@@@@@@@@@@@@@@@
 
+For now, the output format (JSON/XML) is unimportant. The important thing is that the output is transformed into the GA4GH standard with Groovy and/or stored as an annoted output file in S3.
+
 **Required**
 
-* Func.refGene
-* Gene.refGene	
-* GeneDetail.refGene	
-* ExonicFunc.refGene	
-* AAChange.refGene	
-* Xref.refGene	
-* cytoBand	
-
-**Available but not used**
-
-* SIFT_score	
-* SIFT_pred
-* Polyphen2_HDIV_score	
-* Polyphen2_HDIV_pred	
-* Polyphen2_HVAR_score	
-* Polyphen2_HVAR_pred	
-* LRT_score	
-* LRT_pred	
-* MutationTaster_score
-* MutationTaster_pred	
-* MutationAssessor_score	
-* MutationAssessor_pred	
-* FATHMM_score	
-* FATHMM_pred	
-* PROVEAN_score	
-* PROVEAN_pred	
-* VEST3_score	CADD_raw	
-* CADD_phred	DANN_score	
-* fathmm-MKL_coding_score	
-* fathmm-MKL_coding_pred	
-* MetaSVM_score	
-* MetaSVM_pred	
-* MetaLR_score	MetaLR_pred	
-* integrated_fitCons_score	
-* integrated_confidence_value	GERP++_RS	
-* phyloP7way_vertebrate	
-* phyloP20way_mammalian	
-* phastCons7way_vertebrate	
-* phastCons20way_mammalian	
-* SiPhy_29way_logOdds
+* TBD
