@@ -32,6 +32,8 @@ http://annovar.openbioinformatics.org/en/latest/articles/VCF/
 **Data Outputs**
 @@@@@@@@@@@@@@@@
 
+We should add data structure (GA4GH / JSON / whatever) here.
+
 **Required**
 
 * Func.refGene
