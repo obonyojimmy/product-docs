@@ -49,8 +49,12 @@ The default input format for Galaxy data is a raw file. The header information i
 **Data Outputs**
 @@@@@@@@@@@@@@@@
 
-For now, the output format (JSON/XML) is unimportant. The important thing is that the output is transformed into the GA4GH standard with Groovy and/or stored as an annoted output file in S3.
+At this stage, the primary output of Galaxy after the VCFgenotypes tool will be the rsid data element. For now, the output format (JSON/XML) is unimportant. The rsid will typically be a string starting with "rs" and followed by an integer of varying length. An example is rs2383206. 
+
+The rsids from the vcf file should be extracted and stored in the FHIR format along with the patient's data and for further processing. Any additional data we decide to store from the VCF file should be transformed into the GA4GH standard with Groovy and/or backed up as an annoted output (vcf) file in S3.
+
+The rsids will be used in future processes to determine the health impacts of each amino acid change at each location. There might be 20,000 to millions of rsids we need to process.
 
 **Required**
 
-* TBD
+* rsid - the reference SNP ID. For example, rs2383206. These represent the location of a certain amino acid (A, C, G, or T) on a chromosome as well as the identification of that amino acid and what the change is from the reference genome.

@@ -23,6 +23,10 @@ The three types of accessioned objects are prefixed with e if processed by DGVa,
 
 Note that DGVa can be queried through Ensembl BioMart - we should seek to extend the Ensembl API if it makes sense.
 
+**Required**
+
+*TBD
+
 
 *DATA FIELDS TO BE CLASSIFIED*
 
@@ -33,10 +37,6 @@ Note that DGVa can be queried through Ensembl BioMart - we should seek to extend
 * sample details
 * experimental procedures
 * assertion methods
-
-**Required**
-
-*TBD
 
 **Data Outputs**
 @@@@@@@@@@@@@@@@

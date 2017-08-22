@@ -16,14 +16,14 @@ http://annovar.openbioinformatics.org/en/latest/articles/VCF/
 
 **Required**
 
+* Name: dbSNP reference name (rsID) - for example, rs2383206
+
+**Optional**
+
 * chrom: the name of the chromosome (chr1, chr2, etc)
 * chromStart: The reference SNP (rs) start position on the chromosome. 
 * Note: the first base in a chromosome is numbered 0
 * chromEnd: the rs end position on the chromosome
-
-**Optional**
-
-* Name: dbSNP reference name (rsID)
 * Score: dbSNP does not assign a score value, so this field will always contain a 0
 * Strand: this field defines strand orientation as either + or -
 * There is a “BED extended format” with 30 fields, though this is being deprecated. This has been done to comply with current BED UCSC specifications - genome.ucsc.edu/faq/faqformat.html#format1. It has been tested and is compatible with the NCBI remap service, ucsc genome browser, and EBI genome browser (ensembl)

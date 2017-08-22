@@ -25,12 +25,13 @@ We can access the data directly (preferred) or upload a vcf or gvf file.
 
 **Required**
 
+* Sequence variation ID - for example, rs2383206. See an example of the result set here: https://www.ncbi.nlm.nih.gov/SNP/snp_ref.cgi?rs=2383206
+
+**Optional**
+
 * Structural variation ID
 * Object type: set to "variant" - could be variant or study
 * Organism: set to "human" - could be any type of organism
-
-**Optional (not currently used)**
-
 * Method type
 * Assertion
 * Validation status

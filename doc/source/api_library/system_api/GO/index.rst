@@ -88,7 +88,7 @@ Go_sequence
 
 **Required**
 
-* TBD
+* rsid - the reference SNP ID. For example rs3131972.
 
 **Data Outputs**
 @@@@@@@@@@@@@@@@
