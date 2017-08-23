@@ -49,6 +49,7 @@ SYSTEM API DATA FLOW INTERACTIVE DIAGRAM:
    system_api/dbGaP/index
    system_api/ClinVar/index
    system_api/PheGenI/index
+   system_api/ExAC/index
 
 **Templates**
 

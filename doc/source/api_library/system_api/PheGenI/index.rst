@@ -15,13 +15,12 @@ https://www.youtube.com/watch?v=v_yEy--HcKc
 
 **Required (one of the following)**
 
-* Location
-* Gene
-* SNP
+* SNP - this is the reference SNP ID (rsID), for example rs11591147. You can try the manual search using rsid here: https://www.ncbi.nlm.nih.gov/gap/phegeni
 
 **Optional (not currently used)**
 
-* TBD
+* Location
+* Gene
 
 
 **Data Outputs**
@@ -30,7 +29,7 @@ https://www.youtube.com/watch?v=v_yEy--HcKc
 
 **OUTPUTS NEED TO BE SELECTED. A COMPLETE LIST IS SHOWN BELOW:**
 
-Search Results (summary of search results)
+Search Results (summary of search results - start here)
 
 * Association Results - for example, 62 records found
 * Genes - for example, 1 record found
