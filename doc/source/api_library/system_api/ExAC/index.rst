@@ -9,6 +9,8 @@ The figure below shows a summary of ExAC data:
 
 .. image:: /_static/ExAC-summary.png
 
+This is a good article on how ExAC is generally used in research and data processing: https://macarthurlab.org/2014/11/18/a-guide-to-the-exome-aggregation-consortium-exac-data-set/
+
 **API Instructions Summary **
 
 TBD
