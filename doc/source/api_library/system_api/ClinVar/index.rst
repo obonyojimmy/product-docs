@@ -19,10 +19,15 @@ There are also webinars and presentations with more detail here:
 
 ftp://ftp.ncbi.nlm.nih.gov/pub/GTR/presentations/
 
+
 **Data Inputs**
 @@@@@@@@@@@@@@@
 
-**POSSIBLE DATA FIELDS TO USE**
+**Required**
+
+* rsid - reference SNP ID, the output from Galaxy. 
+
+**POSSIBLE ADDITIONAL DATA FIELDS TO USE**
 
 * Accession for a test registered in GTR
 * AlleleID
@@ -63,31 +68,25 @@ ftp://ftp.ncbi.nlm.nih.gov/pub/GTR/presentations/
 * Variation ID
 
 
-**Required**
-
-* TBD
 
 **Data Outputs**
 @@@@@@@@@@@@@@@@
 
-**POSSIBLE OUTPUT FIELDS TO USE**
-* Variation Location - for example, GRCh37/hg19 10q23.1-25.1(chr10:85557432-105804295) GRCh37: Chr10:85557432-105804295
+**Required**
+
 * Gene(s) - for example, ACTA2, FAS, ARL3, BMPR1A, ENTPD1, CHUK, ABCC2, COL17A1, COX15, CPN1, CYP2C19, CYP2C8, CYP2C9
 * Condition(s) - for example, Metastatic prostate carcinoma
 * Clinical significance (last reviewed) - for example, Pathogenic (Jul 23, 2015)
 * Review status - for example, reviewed by expert panel
 * Allele origin - for example, germline or de novo or somatic
 * Method type - for example, reserach or literature only or clinical testing
+
+
+**POSSIBLE ADDITIONAL OUTPUT FIELDS TO USE**
+
+* Variation Location - for example, GRCh37/hg19 10q23.1-25.1(chr10:85557432-105804295) GRCh37: Chr10:85557432-105804295
 * Molecular consequence - for example, frameshift or splice site or near gene
 * Variation type - for example, deletion, indel, duplication
 * Complexity - for example, haplotype or compound heterozygote
 * Variant length - for example, less than 51 bp or between 51 and 1000 bp
 * Variant-gene relationship - for example, single gene or in overlapping gene or multiple genes
-
-**Required**
-
-* TBD	
-
-**Available but not used**
-
-* TBD
