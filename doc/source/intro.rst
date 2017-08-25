@@ -24,3 +24,5 @@ Definitions
 @@@@@@@@@@@
 
 * SNP: A single-nucleotide polymorphism, often abbreviated to SNP, is a variation in a single nucleotide that occurs at a specific position in the genome, where each variation is present to some appreciable degree within a population (e.g. > 1%).
+
+* rsID: 
