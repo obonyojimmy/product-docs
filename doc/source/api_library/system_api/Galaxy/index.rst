@@ -58,3 +58,12 @@ The rsids will be used in future processes to determine the health impacts of ea
 **Required**
 
 * rsid - the reference SNP ID. For example, rs2383206. These represent the location of a certain amino acid (A, C, G, or T) on a chromosome as well as the identification of that amino acid and what the change is from the reference genome.
+
+**Workflows**
+@@@@@@@@@@@@@
+
+This is where we will add exported Galaxy workflows.
+
+* this is a bullet point
+
+# this is a numbered bullet point
