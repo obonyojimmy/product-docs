@@ -57,13 +57,23 @@ The rsids will be used in future processes to determine the health impacts of ea
 
 **Required**
 
-* rsid - the reference SNP ID. For example, rs2383206. These represent the location of a certain amino acid (A, C, G, or T) on a chromosome as well as the identification of that amino acid and what the change is from the reference genome.
+If we can query the database and expose the following fields, we can avoid using file-based outputs for now. The fields will be populated after we run the variant effect predictor workflow and will be: 
+
+## Uploaded_variation : Identifier of uploaded variant. This will be an rsID if one exists, otherwise it will be a "." As a reminder, the rsID is the reference SNP ID. For example, rs2383206. These represent the location of a certain amino acid (A, C, G, or T) on a chromosome as well as the identification of that amino acid and what the change is from the reference genome.
+## Location : Location of variant in standard coordinate format (chr:start or chr:start-end)
+## Allele : The variant allele used to calculate the consequence
+## Gene : Stable ID of affected gene
+## Feature : Stable ID of feature
+## Feature_type : Type of feature - Transcript, RegulatoryFeature or MotifFeature
+## Consequence : Consequence type
+## cDNA_position : Relative position of base pair in cDNA sequence
+## CDS_position : Relative position of base pair in coding sequence
+## Protein_position : Relative position of amino acid in protein
+## Amino_acids : Reference and variant amino acids
+## Codons : Reference and variant codon sequence
+## Existing_variation : Identifier(s) of co-located known variants
 
 **Workflows**
 @@@@@@@@@@@@@
 
-This is where we will add exported Galaxy workflows.
-
-* this is a bullet point
-
-# this is a numbered bullet point
+This is where we will add definitions for Galaxy workflows and exported Galaxy workflow files for reference.
