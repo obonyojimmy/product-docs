@@ -36,9 +36,16 @@ Methods and Requirements
 
 The input data should be assumed to be in a GA4GH-compatible format. If any new fields are added for inputs and outputs, their format should be matched as closely as possible to the GA4GH schema and they should be noted here. 
 
-The default input format for Ensembl data is a simple whitespace-separated format (columns may be separated by space or tab characters), containing five required columns plus an optional identifier column. We will access the data programmatically through the API, so the inputs should be JSON or XML transformed from the GA4GH format to Ensembl-compatible format using Groovy. We will use the Variant Effect Predictor tool in Ensembl. The five required data elements with optional identifier are:
-
 **Required**
+
+We will use the output data from Galaxy as the input data for Ensembl. The Galaxy output will have two key fields that we will use as inputs:
+
+#. Uploaded_variation : Identifier of uploaded variant. This will be an rsID if one exists, otherwise it will be a ”.” As a reminder, the rsID is the reference SNP ID. For example, rs2383206. These represent the location of a certain amino acid (A, C, G, or T) on a chromosome as well as the identification of that amino acid and what the change is from the reference genome.
+#. Gene : Stable ID of affected gene. If the Galaxy Gene ID starts with "ENS" followed by a string of numbers, we will use it to query Ensembl.
+
+If the gene ID is in the NCBI format (a string of numbers only), the search will still work in Ensembl but we would prefer to use NCBI Gene to make sure we are getting the right data output. 
+
+**Optional**
 
 * Chromosome - just the name or number, with no 'chr' prefix. I believe the GA4GH schema map item is Variant:reference_name(string), but this will need to be validated. 
 * Start - the start position at which the variant occurs. Note that GA4GH uses Variant:start(long), a 0-based numbering item (the numbering starts at 0 instead of 1 for the first item). This is relatively unusual in the biological world and will need to be validated to ensure it doesn't cause problems when matching with other systems. This corresponds to the first base of the string of reference bases. Genomic positions are non-negative integers less than reference length. Variants spanning the join of circular genomes are represented as two variants one on each side of the join (position 0).
