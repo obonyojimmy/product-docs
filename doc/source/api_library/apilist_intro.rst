@@ -31,32 +31,40 @@ SYSTEM API DATA FLOW INTERACTIVE DIAGRAM:
 **Development**
 
 .. toctree::
+   system_api/ANNOVAR/index
+   system_api/Cerner_FHIR/index
+   system_api/ClinVar/index
+   system_api/COSMIC/index
+   system_api/DrugBank/index
    system_api/EHR_FHIR/index
-   system_api/ENSEMBL/index
    system_api/Galaxy/index
+   system_api/NCBI_Gene/index
+   system_api/OMIM/index
+   system_api/PheGenI/index
 
 **Planned**
 
 .. toctree::
-   system_api/ANNOVAR/index
+   system_api/dbGaP/index
    system_api/dbSNP/index
    system_api/dbVar/index   
    system_api/DGVa/index
+   system_api/ExAC/index
    system_api/GO/index
    system_api/MeSH/index
    system_api/RxNorm/index   
-   system_api/DrugBank/index
-   system_api/dbGaP/index
-   system_api/ClinVar/index
-   system_api/PheGenI/index
-   system_api/ExAC/index
+
+
+**Not Currently Planned**
+.. toctree::
+   system_api/ENSEMBL/index
+
 
 **Templates**
 
 .. toctree::
    system_api/EHR_FHIR/index
    system_api/Fitness_FHIR/index
-   system_api/Cerner_FHIR/index
    system_api/Epic_FHIR/index
    system_api/GA4GH_api/index
 
