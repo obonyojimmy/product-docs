@@ -34,6 +34,7 @@ SYSTEM API DATA FLOW INTERACTIVE DIAGRAM:
    system_api/ANNOVAR/index
    system_api/Cerner_FHIR/index
    system_api/ClinVar/index
+   system_api/ENSEMBL/index
    system_api/COSMIC/index
    system_api/DrugBank/index
    system_api/EHR_FHIR/index
@@ -56,8 +57,6 @@ SYSTEM API DATA FLOW INTERACTIVE DIAGRAM:
 
 
 **Not Currently Planned**
-.. toctree::
-   system_api/ENSEMBL/index
 
 
 **Templates**
