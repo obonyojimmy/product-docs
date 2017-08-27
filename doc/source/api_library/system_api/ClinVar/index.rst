@@ -25,7 +25,7 @@ ftp://ftp.ncbi.nlm.nih.gov/pub/GTR/presentations/
 
 **Required**
 
-* rsid - reference SNP ID, the output from Galaxy. 
+* dbSNP HGVS IDs : for example, NM_174936.3:c.137G>A , ...
 
 **POSSIBLE ADDITIONAL DATA FIELDS TO USE**
 
@@ -80,13 +80,13 @@ ftp://ftp.ncbi.nlm.nih.gov/pub/GTR/presentations/
 * Review status - for example, reviewed by expert panel
 * Allele origin - for example, germline or de novo or somatic
 * Method type - for example, reserach or literature only or clinical testing
-
-
-**POSSIBLE ADDITIONAL OUTPUT FIELDS TO USE**
-
-* Variation Location - for example, GRCh37/hg19 10q23.1-25.1(chr10:85557432-105804295) GRCh37: Chr10:85557432-105804295
 * Molecular consequence - for example, frameshift or splice site or near gene
 * Variation type - for example, deletion, indel, duplication
 * Complexity - for example, haplotype or compound heterozygote
 * Variant length - for example, less than 51 bp or between 51 and 1000 bp
 * Variant-gene relationship - for example, single gene or in overlapping gene or multiple genes
+
+
+**POSSIBLE ADDITIONAL OUTPUT FIELDS TO USE**
+
+* Variation Location - for example, GRCh37/hg19 10q23.1-25.1(chr10:85557432-105804295) GRCh37: Chr10:85557432-105804295

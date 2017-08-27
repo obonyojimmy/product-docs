@@ -51,6 +51,7 @@ For now, the output format (JSON/XML) is unimportant. The important thing is tha
 
 **Required**
 
+* dbSNP HGVS IDs : for example, NM_174936.3:c.137G>A , ...
 * EXTERNAL:External References, EntrezGene ID
 * Phenotype Data : Significant Associations : Phenotype, disease and trait - e.g. Breat-ovarian cancer, familial 2
 * Phenotype Data : Significant Associations : Clinical Significance - will need to split data into clinical significance and evidence status (see clinvar rating and evidence status below - if these are always the same we can get them directly from the clinvar rating and evidence status)

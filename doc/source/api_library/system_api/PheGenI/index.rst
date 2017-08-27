@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=v_yEy--HcKc
 
 **Required (one of the following)**
 
-#. Uploaded_variation : Identifier of uploaded variant. This will be an rsID if one exists, otherwise it will be a ”.” As a reminder, the rsID is the reference SNP ID. For example, e.g. rs80359585. These represent the location of a certain amino acid (A, C, G, or T) on a chromosome as well as the identification of that amino acid and what the change is from the reference genome.
+#. Uploaded_variation : Identifier of uploaded variant. This will be an rsID if one exists, otherwise it will be a ”.” As a reminder, the rsID is the reference SNP ID. For example, e.g. rs80359585. These represent the location of a certain amino acid (A, C, G, or T) on a chromosome as well as the identification of that amino acid and what the change is from the reference genome. If the rsID exists, we will search by SNP instead of by Gene.
 #. Entrez Gene ID : Stable ID of affected gene. If the gene ID from Galaxy is in the NCBI Entrez format (a string of numbers only), we will use it to query PheGenI using the "gene" search. If the Galaxy Gene ID output started with "ENS," we need to use the Ensembl Entrez Gene ID output that converted the Gene ID from Ensembl format to Entrez format.
 
 
@@ -91,11 +91,7 @@ dbGaP Studies
 * Platform - the test platform used in the study. For example, Illumina: HumanHap300v1.1
 
 
-
-
 **Required**
-
-* TBD
 
 **Available but not used**
 
