@@ -15,12 +15,8 @@ https://www.youtube.com/watch?v=v_yEy--HcKc
 
 **Required (one of the following)**
 
-* SNP - this is the reference SNP ID (rsID), for example rs11591147. You can try the manual search using rsid here: https://www.ncbi.nlm.nih.gov/gap/phegeni
-
-**Optional (not currently used)**
-
-* Location
-* Gene
+#. Uploaded_variation : Identifier of uploaded variant. This will be an rsID if one exists, otherwise it will be a ”.” As a reminder, the rsID is the reference SNP ID. For example, e.g. rs80359585. These represent the location of a certain amino acid (A, C, G, or T) on a chromosome as well as the identification of that amino acid and what the change is from the reference genome.
+#. Entrez Gene ID : Stable ID of affected gene. If the gene ID from Galaxy is in the NCBI Entrez format (a string of numbers only), we will use it to query PheGenI using the "gene" search. If the Galaxy Gene ID output started with "ENS," we need to use the Ensembl Entrez Gene ID output that converted the Gene ID from Ensembl format to Entrez format.
 
 
 **Data Outputs**
