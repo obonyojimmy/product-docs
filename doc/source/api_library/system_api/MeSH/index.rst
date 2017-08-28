@@ -85,7 +85,7 @@ Geographicals [Z]
 * history    - HI, - HIST. Used for the historical aspects of any subject. It includes brief historical notes but excludes case histories.
 * immunology    - IM, - IMMUNOL. Used for immunologic studies of tissues, organs, microorganisms, fungi, viruses, and animals. It includes immunologic aspects of diseases but not immunologic procedures used for diagnostic, preventive, or therapeutic purposes, for which "diagnosis", "prevention & control", or "therapy" are used. The concept is also used for chemicals as antigens or haptens.
 * injuries    - IN, - INJ. Used with anatomic headings, animals, and sports for wounds and injuries. Excludes cell damage, for which "pathology" is used.
-innervation    - IR, - INNERV. Used with organs, regions, or tissues for their nerve supply.
+* innervation    - IR, - INNERV. Used with organs, regions, or tissues for their nerve supply.
 * instrumentation    - IS, - INSTRUM. Used with diagnostic or therapeutic procedures, analytic techniques, and specialties or disciplines, for the development or modification of apparatus, instruments, or equipment.
 * isolation & purification    - IP, - ISOL. Used with bacteria, viruses, fungi, protozoa, and helminths for the obtaining of pure strains or for the demonstration of the presence of or identification of organisms by DNA analyses, immunologic, or other methods, including culture techniques. It is used also with biological substances and chemicals for the isolation and purification of the constituents.
 * legislation & jurisprudence    - LJ, - LEGIS. Used for laws, statutes, ordinances, or government regulations, as well as for legal controversy and court decisions.
