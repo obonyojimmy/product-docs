@@ -95,7 +95,7 @@ Geographicals [Z]
 * microbiology    - MI, - MICROBIOL. Used with organs, animals, and higher plants and with diseases for microbiologic studies. For parasites, "parasitology" is used; for viruses, "virology" is used.
 * mortality    - MO, - MORTAL. Used with human and veterinary diseases for mortality statistics. For deaths resulting from various procedures statistically but for a death resulting in a specific case, use FATAL OUTCOME, not /mortality.
 * nursing    - NU, - NURS. Used with diseases for nursing care and techniques in their management. It includes the nursing role in diagnostic, therapeutic, and preventive procedures.
-organization & administration    - OG, - ORGAN. Used for administrative structure and management.
+* organization & administration    - OG, - ORGAN. Used for administrative structure and management.
 * parasitology    - PS, - PARASITOL. Used with animals, higher plants, organs, and diseases for parasitic factors. In diseases, it is not used if the parasitic involvement is implicit in the diagnosis.
 * pathogenicity    - PY, - PATHOGEN. Used with microorganisms, viruses, and parasites for studies of their ability to cause disease in man, animals, or plants.
 pathology    - PA, - PATHOL. Used for organ, tissue, or cell structure in disease states.
