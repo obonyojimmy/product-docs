@@ -98,7 +98,7 @@ Geographicals [Z]
 * organization & administration    - OG, - ORGAN. Used for administrative structure and management.
 * parasitology    - PS, - PARASITOL. Used with animals, higher plants, organs, and diseases for parasitic factors. In diseases, it is not used if the parasitic involvement is implicit in the diagnosis.
 * pathogenicity    - PY, - PATHOGEN. Used with microorganisms, viruses, and parasites for studies of their ability to cause disease in man, animals, or plants.
-pathology    - PA, - PATHOL. Used for organ, tissue, or cell structure in disease states.
+* pathology    - PA, - PATHOL. Used for organ, tissue, or cell structure in disease states.
 * pharmacokinetics    - PK, - PHARMACOKIN. Used for the mechanism, dynamics and kinetics of exogenous chemical and drug absorption, biotransformation, distribution, release, transport, uptake and elimination as a function of dosage, extent and rate of metabolic processes.
 * pharmacology    - PD, - PHARMACOL. Used with drugs and exogenously administered chemical substances for their effects on living tissues and organisms. It includes acceleration and inhibition of physiological and biochemical processes and other pharmacologic mechanisms of action.
 * physiology    - PH, - PHYSIOL. Used with organs, tissues, and cells of unicellular and multicellular organisms for normal function. It is used also with biochemical substances, endogenously produced, for their physiologic role.
