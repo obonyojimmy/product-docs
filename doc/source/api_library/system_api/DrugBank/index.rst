@@ -13,6 +13,9 @@ The DrugBank complete database and schema definition can be found here:
 
 https://www.drugbank.ca/releases/latest
 
+The DrugBank documentation is shown here:
+https://www.drugbank.ca/documentation
+
 
 **Data Inputs**
 @@@@@@@@@@@@@@@
@@ -24,14 +27,14 @@ https://www.drugbank.ca/docs/drugbank.xsd
 
 **Required**
 
-* TBD
+* Allele Name
 
 **Data Outputs**
 @@@@@@@@@@@@@@@@
 
 **Required**
 
-* TBD
+* For full list of drugs, search for Alleles and extract Pharmacogenomic Effects/ADRs (field name). For dosing and pharmacokinetics (metabolizer status), we will need to go to Uniprot or PharmGKB.
 
 **Available but not used**
 
