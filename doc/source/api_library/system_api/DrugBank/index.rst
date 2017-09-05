@@ -27,15 +27,32 @@ https://www.drugbank.ca/docs/drugbank.xsd
 
 **Required**
 
-* Allele Name
+* Drug ID or Drug Name
 
 **Data Outputs**
 @@@@@@@@@@@@@@@@
 
-**Required**
+**Step 1**
+Look up rsIDs from the Defining Change(s) filed of the "Pharmacology - pharmacogenomic effects" category. The rsID will be compared with the rsIDs from the individual patient to determine if he/she has the variant of interest.
 
-* For full list of drugs, search for Alleles and extract Pharmacogenomic Effects/ADRs (field name). For dosing and pharmacokinetics (metabolizer status), we will need to go to Uniprot or PharmGKB.
+**Step 2**
+If the rsID is found, retrieve the following fields from the "Pharmacology - pharmacogenomic effects" category associated with that rsID:
 
-**Available but not used**
+* Type(s): information about the pharmacogenomic effect, for example ADR = adverse drug reaction, Inferred = inferred from literature, etc.
+* Description: the description of the pharmacogenomic effect
+* Groups: the group the pharmacogenomic effect belongs to e.g. "slow acetylators"
 
-* TBD
+Additionally, retrieve the following fields from the "Drug Identification" category:
+
+* Groups: approved status of the drug
+* Description
+* Clinical Trials: necessary if the Groups statis is "investigational" or "experimental" so we should include this
+
+Finally, retrieve the following fields from the "Interactions" category:
+
+* Drug
+* Interaction
+
+**Additional Notes**
+
+For full list of drugs, search for Alleles and extract Pharmacogenomic Effects/ADRs (field name). For dosing and pharmacokinetics (metabolizer status), we will need to go to Uniprot or PharmGKB.
