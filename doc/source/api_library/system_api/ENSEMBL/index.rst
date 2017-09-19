@@ -58,3 +58,26 @@ For now, the output format (JSON/XML) is unimportant. The important thing is tha
 * Variant with equivalent alleles - e.g. rs80359585
 * ClinVar rating
 * Evidence status
+
+**From the Ensembl Variant Effect Predictor**
+
+* Allele - the variant allele used to calculate the consequence
+* Gene - Ensembl stable ID of affected gene
+* Feature - Ensembl stable ID of feature
+* Consequence - consequence type of this variant
+* Amino acid change - only given if the variant affects the protein-coding sequence
+* IMPACT - the impact modifier for the consequence type
+* VARIANT_CLASS - Sequence Ontology variant class
+* HGVSp - the HGVS protein sequence name - especially used for searching COSMIC
+* SIFT - the SIFT prediction and/or score, with both given as prediction(score) - researcher
+* PolyPhen - the PolyPhen prediction and/or score - researcher
+* ExAC_Adj_AF - Adjusted frequency of existing variant in ExAC combined population
+* CLIN_SIG - ClinVar clinical significance of the dbSNP variant
+* BIOTYPE - Biotype of transcript or regulatory feature
+* APPRIS - Annotates alternatively spliced transcripts as primary or alternate based on a range of computational methods. NB: not available for GRCh37
+* TSL - Transcript support level. NB: not available for GRCh37
+* PUBMED - Pubmed ID(s) of publications that cite existing variant
+* SOMATIC - Somatic status of existing variant(s)
+* PHENO - Indicates if existing variant is associated with a phenotype, disease or trait
+* GENE_PHENO - Indicates if overlapped gene is associated with a phenotype, disease or trait
+* REFSEQ_MATCH - the RefSeq transcript match status; contains a number of flags indicating whether this RefSeq transcript matches the underlying reference sequence and/or an Ensembl transcript (more information). NB: not available for GRCh37.
