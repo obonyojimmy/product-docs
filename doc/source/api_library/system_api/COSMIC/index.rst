@@ -33,15 +33,13 @@ The input data should be assumed to be in a GA4GH-compatible format unless files
 
 **Required**
 
-**Optional**
+To query the COSMIC database, the Ensembl Gene ID should be used. The Ensembl ID will come from the Ensembl database/API and will start with the characters "ENS" - for example, "ENSG00000012048"
 
 **Data Outputs**
 @@@@@@@@@@@@@@@@
 
-
-
 **Required**
 
-
-**Optional**
+* Overview: Drug sensitivity data - these are the drugs the mutation will be sensitive to
+* Drug resistance: This section shows the drugs that have been used to treat mutant tumours for the gene of interest. In related fields you can see any other genes that have been treated with the same drug(s), and the distribution of mutations that occur in those genes.
 
