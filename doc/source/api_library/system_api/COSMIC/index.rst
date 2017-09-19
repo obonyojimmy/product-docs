@@ -1,19 +1,7 @@
 COSMIC System API
 !!!!!!!!!!!!!!!!!!!!!
 
-COSMIC is...
-
-The figure below shows a summary of NCBI Gene functions:
-
-.. image:: /_static/Galaxy-summary.png
-
-**API Instructions Summary (tl;dr)**
-
-Add summary here
-
-Process steps:
-
-#. process step 1
+COSMIC is the most comprehensive resource for exploring the impact of somatic mutations in human cancer.
 
 Connection instructions:
 Stored here as soon as we make the docs private.
@@ -33,7 +21,7 @@ The input data should be assumed to be in a GA4GH-compatible format unless files
 
 **Required**
 
-To query the COSMIC database, the Ensembl Gene ID should be used. The Ensembl ID will come from the Ensembl database/API and will start with the characters "ENS" - for example, "ENSG00000012048"
+Gene ID: To query the COSMIC database, the Ensembl Gene ID should be used. The Ensembl ID will come from the Ensembl database/API and will start with the characters "ENS" - for example, "ENSG00000012048"
 
 **Data Outputs**
 @@@@@@@@@@@@@@@@
