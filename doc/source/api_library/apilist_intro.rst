@@ -76,6 +76,9 @@ Process APIs
 
 **Development**
 
+.. toctree::
+   process_api/Genomic_Analysis/index
+
 **Planned**
 
 **Templates**
