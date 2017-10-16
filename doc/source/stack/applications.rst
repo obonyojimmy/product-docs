@@ -18,7 +18,7 @@ Technologies
 
 * Cloud Storage: Amazon EBS/Aurora? (TBD)
 
-* NoSQL: MongoDB
+* NoSQL: MongoDB/Postgres NoSQL? 
 
 * Managed Memcache: Amazon Elasticache
 
