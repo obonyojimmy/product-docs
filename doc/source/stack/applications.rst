@@ -35,3 +35,8 @@ Technologies
 **4. Libraries**
 
 * Web App Dev: Node.js, React.js
+
+
+**5. Machine Learning**
+
+* EC2 with: Scala, Java, Python, Hadoop, Spark, Jupyter (Spark with Jupyter notebook)
