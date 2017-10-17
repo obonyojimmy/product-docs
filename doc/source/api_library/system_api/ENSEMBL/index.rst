@@ -9,17 +9,7 @@ The figure below shows a summary of Ensembl functions:
 
 **API Instructions Summary (tl;dr)**
 
-This will be a process API for a biology database called Ensembl that we have hosted on AWS. The purpose will be to import a .vcf file stored in an S3 bucket and run the "Assembly Converter" and “Variant Effect Predictor” workflows on it, then store the output as a file back in the same S3 bucket. A high-level diagram is shown below:
-
-.. image:: /_static/Ensembl-api-overview.png
-
-Process steps:
-
-* The API will first need to pull a .vcf file from an AWS S3 endpoint and transfer it to the AWS EC2 Ensembl endpoint. At this point no queuing is needed but we will add queuing in the future
-* The API then needs to call the Assembly Converter followed by the Ensembl Variant Effect Predictor Workflows. This will annotate the file and produce a new file as an output
-* The API should handle errors that occur during this process and retry as needed to a reasonable point. 
-* We will also need to watch for the successful completion of the process and make sure a new annotated output file has been created
-* The output file will be transferred back to the S3 endpoint and stored. Note that the file transfer and storage should not be a blocker. As this API will interact with many other APIs, the file handling piece is not nearly as important as the data processing piece. As long as the data are ingested, processed, and transformed, the transfer and storage are of lower priority.
+This will be a process API for a biology database called Ensembl that we have hosted on AWS. The purpose will be to use some variant information parsed from the Galaxy vcf output and run “Variant Effect Predictor” workflows on it, then store the output for future analysis.
 
 Connection instructions:
 Stored here as soon as we make the docs private.
@@ -27,7 +17,6 @@ Stored here as soon as we make the docs private.
 Methods and Requirements
 
 * This must be written as a REST API
-* This must follow the format and standards defined in the existing API templates located here: https://bitbucket.org/snippetmd/snippet-api-platform
 * All code must be documented. We use readthedocs for our documentation, so your documentation may be in sphinx/markdown language or plain text. See more about the documentation here: http://docs.readthedocs.io/en/latest/getting_started.html
 
 
@@ -38,11 +27,59 @@ The input data should be assumed to be in a GA4GH-compatible format. If any new 
 
 **Required**
 
-We will use the output data from Galaxy as the input data for Ensembl. The Galaxy output will have two key fields that we will use as inputs:
+We will use the output data from Galaxy as the input data for Ensembl. The Galaxy output will have several key fields we will use:
 
-#. Uploaded_variation : Identifier of uploaded variant. This will be an rsID if one exists, otherwise it will be a ”.” As a reminder, the rsID is the reference SNP ID. For example, e.g. rs80359585. These represent the location of a certain amino acid (A, C, G, or T) on a chromosome as well as the identification of that amino acid and what the change is from the reference genome.
-#. Gene : Stable ID of affected gene. If the Galaxy Gene ID starts with "ENS" followed by a string of numbers, we will use it to query Ensembl. If the gene ID is in the NCBI format (a string of numbers only), the search will still work in Ensembl. We should pull the data to compare the output with the results from NCBI Gene (another competing standard).
+#. Chromosome (Galaxy ID: CHROM; Ensembl ID: chromosome) this is simply the chromosome number, represented as an integer - e.g. 1
+#. Start (Galaxy ID: POS; Ensembl ID: start): this is the start position of the variant on the chromosome, and will be an integer - e.g. 881907
+#. End (Galaxy ID: none - not a direct output of galaxy, this will be a calculated field; Ensembl ID: end): this is the end position of the variant on the chromosome, and will generally equal the start position with some exceptions. The logic is as follows:
 
+Logic:
+Ignore "." ("." = 0)
+IF ALT = ".", "POS" + NUMBER OF CHARACTERS IN "REF" - 1 
+ELSE "POS" + NUMBER OF CHARACTERS IN "ALT" - NUMBER OF CHARACTERS(A,C,G,T) IN "REF." 
+
+Example: 
+POS (start) = 56000
+REF = A 
+ALT = AGAT 
+End = start + length(ALT) - length(REF) = 56000 + 4 - 1 = 56003
+
+#. Allele (Galaxy ID: none - not a direct output of galaxy, this will be a calculated field; Ensembl ID: allele): This is a description of the allele, how each amino acid in the expected sequence is replaced with something else. The logic is as follows:
+
+Logic:
+FIRST REPLACE ALL "." WITH "-"
+THEN IF NUMBER OF CHARACTERS IN "ALT" > NUMBER OF CHARACTERS IN "REF" AND THE FIRST CHARACTER OF EACH IS THE SAME, IGNORE THE FIRST CHARACTER. THEN ALLELE = "REF" & "/" & "ALT" WITH THE LEADING CHARACTER REMOVED.
+OTHERWISE ALLELE = "REF" & "/" & "ALT"
+
+Example 1:
+REF = G
+ALT = C
+Allele = G/C
+
+Example 2:
+REF = A
+ALT = AGAT
+Allele = -/GAT
+
+Example 3:
+REF = GAT
+ALT = .
+Allele = GAT/-
+
+Example 4:
+REF = G
+ALT = CAGT
+Allele = G/CAGT
+
+#. Strand (Galaxy ID: none, not a direct output out of galaxy; Ensembl ID = strand): this is defined as either forward (+) or reverse (-). For our purposes, Galaxy has already standardized the output for us. This value will always be "+".
+
+We will pass the following variables into the Ensembl Variant Effect Predictor:
+
+* chromosome (e.g. 1)
+* start (e.g. 881907)
+* end (e.g. 881906)
+* allele (e.g. -/C)
+* strand (e.g. +)
 
 **Data Outputs**
 @@@@@@@@@@@@@@@@
