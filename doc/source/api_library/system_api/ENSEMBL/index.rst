@@ -29,9 +29,9 @@ The input data should be assumed to be in a GA4GH-compatible format. If any new 
 
 We will use the output data from Galaxy as the input data for Ensembl. The Galaxy output will have several key fields we will use:
 
-#. Chromosome (Galaxy ID: CHROM; Ensembl ID: chromosome) this is simply the chromosome number, represented as an integer - e.g. 1
-#. Start (Galaxy ID: POS; Ensembl ID: start): this is the start position of the variant on the chromosome, and will be an integer - e.g. 881907
-#. End (Galaxy ID: none - not a direct output of galaxy, this will be a calculated field; Ensembl ID: end): this is the end position of the variant on the chromosome, and will generally equal the start position with some exceptions. The logic is as follows:
+1. Chromosome (Galaxy ID: CHROM; Ensembl ID: chromosome) this is simply the chromosome number, represented as an integer - e.g. 1
+2. Start (Galaxy ID: POS; Ensembl ID: start): this is the start position of the variant on the chromosome, and will be an integer - e.g. 881907
+3. End (Galaxy ID: none - not a direct output of galaxy, this will be a calculated field; Ensembl ID: end): this is the end position of the variant on the chromosome, and will generally equal the start position with some exceptions. The logic is as follows:
 
 Logic:
 Ignore "." ("." = 0)
@@ -44,7 +44,7 @@ REF = A
 ALT = AGAT 
 End = start + length(ALT) - length(REF) = 56000 + 4 - 1 = 56003
 
-#. Allele (Galaxy ID: none - not a direct output of galaxy, this will be a calculated field; Ensembl ID: allele): This is a description of the allele, how each amino acid in the expected sequence is replaced with something else. The logic is as follows:
+4. Allele (Galaxy ID: none - not a direct output of galaxy, this will be a calculated field; Ensembl ID: allele): This is a description of the allele, how each amino acid in the expected sequence is replaced with something else. The logic is as follows:
 
 Logic:
 FIRST REPLACE ALL "." WITH "-"
@@ -71,7 +71,7 @@ REF = G
 ALT = CAGT
 Allele = G/CAGT
 
-#. Strand (Galaxy ID: none, not a direct output out of galaxy; Ensembl ID = strand): this is defined as either forward (+) or reverse (-). For our purposes, Galaxy has already standardized the output for us. This value will always be "+".
+5. Strand (Galaxy ID: none, not a direct output out of galaxy; Ensembl ID = strand): this is defined as either forward (+) or reverse (-). For our purposes, Galaxy has already standardized the output for us. This value will always be "+".
 
 We will pass the following variables into the Ensembl Variant Effect Predictor:
 
