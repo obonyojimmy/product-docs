@@ -84,6 +84,8 @@ We will pass the following variables into the Ensembl Variant Effect Predictor:
 **Data Outputs**
 @@@@@@@@@@@@@@@@
 
+**Required**
+
 * Uploaded_variation: this will be the reference to tie back the variant to the input data, often the rsID e.g. rs1287637
 * Consequence: the variant type e.g. splice_acceptor_variant
 * Symbol: The gene symbol/name e.g. NPHP4
@@ -97,7 +99,13 @@ We will pass the following variables into the Ensembl Variant Effect Predictor:
 * AF: Frequency of existing variant in population (note that race-specific allele frequencies exist) e.g. 0.8433
 * gnomAD_AF: Frequency of existing variant in gnomAD exomes combined population e.g. 0.8277
 
-**Required**
+
+
+
+
+
+
+**NOT USED RIGHT NOW BUT MAY BE USED IN THE FUTURE**
 
 * dbSNP HGVS IDs : for example, NM_174936.3:c.137G>A , ...
 * EXTERNAL:External References, EntrezGene ID
